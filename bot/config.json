@@ -1,0 +1,7 @@
+{
+    "currency_pair": "XBTZAR",
+    "buy_threshold": -2.5,
+    "sell_threshold": 2.5,
+    "trade_amount": 100,
+    "simulate": true
+}
