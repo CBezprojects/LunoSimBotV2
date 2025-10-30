@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "justenoughitems",
+  "version": "${version}",
+  "name": "Just Enough Items",
+  "description": "A recipe and item viewing mod for Minecraft",
+  "authors": [
+    "YourName"
+  ],
+  "contact": {
+    "homepage": "https://github.com/yourusername/jei-fabric-mod",
+    "sources": "https://github.com/yourusername/jei-fabric-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/justenoughitems/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.justenoughitems.fabric.JustEnoughItems"
+    ],
+    "client": [
+      "com.justenoughitems.fabric.client.JustEnoughItemsClient"
+    ]
+  },
+  "mixins": [
+    "justenoughitems.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+  }
+}

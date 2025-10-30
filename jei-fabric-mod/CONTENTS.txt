@@ -1,0 +1,44 @@
+JEI FABRIC MOD - PROJECT CONTENTS
+==================================
+
+All files needed to build and run the mod locally:
+
+BUILD SYSTEM:
+- build.gradle              (Gradle build config)
+- gradle.properties         (Minecraft 1.21.1, Fabric settings)
+- settings.gradle           (Project settings)
+- gradlew + gradlew.bat    (Build scripts for all platforms)
+- gradle/wrapper/*         (Gradle wrapper files)
+
+SOURCE CODE:
+- src/main/java/com/justenoughitems/fabric/
+  └── JustEnoughItems.java (Main mod class)
+
+- src/client/java/com/justenoughitems/fabric/client/
+  ├── JustEnoughItemsClient.java      (Client-side initialization)
+  ├── gui/OverlayRenderer.java        (Item overlay UI)
+  ├── gui/RecipeViewerScreen.java     (Recipe viewer)
+  ├── recipe/RecipeManager.java       (Recipe indexing & search)
+  └── mixin/ScreenMixin.java          (Minecraft integration)
+
+RESOURCES:
+- src/main/resources/
+  ├── fabric.mod.json                 (Mod metadata)
+  ├── justenoughitems.mixins.json    (Mixin config)
+  └── assets/justenoughitems/lang/
+      └── en_us.json                  (English translations)
+
+DOCUMENTATION:
+- README.md                 (Full documentation)
+- QUICKSTART.md            (Quick reference)
+- TEST_INSTRUCTIONS.md     (How to test)
+- DOWNLOAD_AND_USE.md      (Setup guide)
+- LICENSE                  (MIT License)
+
+GIT:
+- .git/                    (Complete repository)
+- .gitignore              (Git ignore rules)
+
+BUILD OUTPUT (after running ./gradlew build):
+- build/libs/justenoughitems-fabric-1.0.0.jar (Your compiled mod!)
+
