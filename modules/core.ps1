@@ -43,10 +43,10 @@ do {
                 . $edit
                 Write-Log 'Edited wallet'
             }
-    else {
-        Write-Log 'Wallet edit module missing'
-    }
-}
+            else {
+                Write-Log 'Wallet edit module missing'
+            }
+        }
 '5' {
     . (Join-Path $mainRoot 'modules\summary.ps1')
     Write-Log 'Viewed portfolio summary'

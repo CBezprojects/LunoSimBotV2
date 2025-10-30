@@ -4,7 +4,9 @@ from tkinter import ttk, scrolledtext, messagebox
 import threading, os, time, json, shutil
 
 # === Paths ===
-BASE_DIR = r"C:\Bots\LunoSimBot"
+# Use relative paths from the script location (gui folder is inside project root)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SCRIPT_DIR)  # Go up one level to project root
 BOT_DIR = os.path.join(BASE_DIR, "bot")
 WALLET_PATH = os.path.join(BOT_DIR, "wallet.json")
 CONFIG_PATH = os.path.join(BOT_DIR, "config.json")
@@ -54,13 +56,25 @@ def pause_bot():
 
 def open_export():
     try:
-        os.startfile(EXPORT_PATH)
+        import platform
+        if platform.system() == 'Windows':
+            os.startfile(EXPORT_PATH)
+        elif platform.system() == 'Darwin':  # macOS
+            os.system(f'open "{EXPORT_PATH}"')
+        else:  # Linux and others
+            os.system(f'xdg-open "{EXPORT_PATH}"')
     except Exception as e:
         log(f"Failed to open export: {str(e)}")
 
 def open_folder():
     try:
-        os.startfile(BOT_DIR)
+        import platform
+        if platform.system() == 'Windows':
+            os.startfile(BOT_DIR)
+        elif platform.system() == 'Darwin':  # macOS
+            os.system(f'open "{BOT_DIR}"')
+        else:  # Linux and others
+            os.system(f'xdg-open "{BOT_DIR}"')
     except Exception as e:
         log(f"Failed to open folder: {str(e)}")
 

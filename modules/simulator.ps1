@@ -39,7 +39,7 @@ try {
         Start-Sleep -Seconds 5
     }
 }
-catch [System.Management.Automation.StopUpsteamException] {
+catch [System.Management.Automation.StopUpstreamException] {
     Write-Host ''
     Write-Host 'Price fetch stopped.'
 }
