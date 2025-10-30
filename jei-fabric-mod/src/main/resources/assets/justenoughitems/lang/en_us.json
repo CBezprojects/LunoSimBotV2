@@ -1,0 +1,9 @@
+{
+  "key.justenoughitems.toggle_overlay": "Toggle Item Overlay",
+  "key.justenoughitems.show_recipe": "Show Recipe",
+  "key.justenoughitems.show_usage": "Show Usage",
+  "category.justenoughitems.main": "Just Enough Items",
+  "justenoughitems.search.hint": "Search items...",
+  "justenoughitems.recipe.title": "Recipe",
+  "justenoughitems.usage.title": "Usage"
+}
